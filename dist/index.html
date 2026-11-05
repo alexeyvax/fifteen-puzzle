@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151528">
+  <meta name="description" content="Take a little time for your mind. Fifteen Puzzle is a beautifully simple sliding puzzle with four difficulty levels, three themes, and offline play.">
+  <meta property="og:title" content="Fifteen Puzzle — A little focus. A little escape.">
+  <meta property="og:description" content="A timeless sliding puzzle, a fresh perspective. Find your flow with Fifteen Puzzle for iPhone.">
+  <meta property="og:type" content="website">
+  <title>Fifteen Puzzle — A little focus. A little escape.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="privacy-link.css">
+  <script src="puzzle.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="apple" viewBox="0 0 24 24"><path fill="currentColor" d="M17.1 12.6c0-2 1.6-3 1.7-3.1-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.2 2.8 2.1 1.1 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.7-2.1c.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.3-.9-2.3-3.7ZM14.9 6.3c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3Z"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 18 17"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></symbol>
+    <symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7m-3.5-3.5v7"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </defs></svg>
+
+  <main id="main">
+  <div class="hero-landscape">
+    <header class="header wrap">
+      <a class="brand" href="#" aria-label="Fifteen Puzzle home"><span class="brand-tile">15</span><span>fifteen<span class="brand-light"> puzzle</span></span></a>
+      <nav aria-label="Main navigation"><a class="nav-text" href="#the-game">The game</a><a class="nav-text" href="#your-challenge">Find your challenge</a><a class="nav-download" href="https://apps.apple.com/us/app/fifteen-puzzle-board-game/id6830818241" target="_blank" rel="noopener noreferrer">Get the app <svg class="icon"><use href="#arrow"/></svg></a></nav>
+    </header>
+
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-star">✦</span> A CLASSIC, BEAUTIFULLY REIMAGINED</p>
+          <h1 id="hero-title">A little focus.<br><span>A little escape.</span></h1>
+          <p class="hero-description">Fifteen tiles. One empty space. Endless little victories.<br class="desktop-break"> Slow down, slide a tile, and find your flow.</p>
+          <div class="hero-actions"><a class="app-store" href="https://apps.apple.com/us/app/fifteen-puzzle-board-game/id6830818241" target="_blank" rel="noopener noreferrer" aria-label="Download Fifteen Puzzle on the App Store"><svg class="apple-icon"><use href="#apple"/></svg><span><small>Download on the</small><strong>App Store</strong></span><svg class="icon store-arrow"><use href="#arrow"/></svg></a><span class="platform-note">Made for your<br><strong>little moments of calm.</strong></span></div>
+          <p class="hero-footnote"><span></span> Play offline. Anywhere. At your own pace.</p>
+        </div>
+
+        <div class="game-showcase" id="try-it">
+          <div class="floating-spark spark-one">✧</div><div class="floating-spark spark-two">✦</div>
+          <div class="demo-panel">
+            <div class="demo-top"><span><span class="live-dot"></span> A LITTLE PREVIEW</span><span id="board-label">Classic · 4 × 4</span></div>
+            <div class="game-stats"><span><svg class="icon"><use href="#clock"/></svg><span id="timer">00:00</span></span><span>Moves <strong id="move-count">0</strong></span></div>
+            <div class="puzzle-board" id="puzzle-board" role="group" aria-label="Interactive classic sliding puzzle. Move a tile next to the empty space."></div>
+            <div class="demo-bottom"><p id="game-message" role="status">A little challenge. Tap a tile to begin.</p><button class="shuffle" id="shuffle" type="button" aria-label="Shuffle a new puzzle" title="New puzzle"><svg class="icon"><use href="#refresh"/></svg></button></div>
+          </div>
+          <div class="theme-picker" role="group" aria-label="Preview a tile theme"><span>A mood for every mind.</span><div class="theme-options"><button class="theme-dot light active" data-theme="light" type="button" aria-label="Light theme" aria-pressed="true" title="Light"><svg class="icon"><use href="#check"/></svg></button><button class="theme-dot dark" data-theme="dark" type="button" aria-label="Dark theme" aria-pressed="false" title="Dark"><svg class="icon"><use href="#check"/></svg></button><button class="theme-dot wood" data-theme="wood" type="button" aria-label="Wood theme" aria-pressed="false" title="Wood"><svg class="icon"><use href="#check"/></svg></button></div></div>
+        </div>
+      </section>
+      <div class="scenery" aria-hidden="true">
+        <svg viewBox="0 0 1600 410" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dusk" x2="0" y2="1"><stop stop-color="#856390" stop-opacity="0"/><stop offset=".6" stop-color="#bd7a98" stop-opacity=".25"/><stop offset="1" stop-color="#18182e"/></linearGradient><linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#5b416c"/><stop offset="1" stop-color="#26243e"/></linearGradient><symbol id="tree" viewBox="0 0 40 100"><path d="m20 0-8 23h5L7 44h7L2 68h13L0 85h17v15h6V85h17L25 68h13L26 44h7L23 23h5Z"/></symbol></defs><path fill="url(#dusk)" d="M0 0h1600v410H0z"/><path fill="url(#mountain)" opacity=".65" d="M0 290 98 246 155 267 310 158 420 229 533 203 646 274 810 211 936 244 1101 154 1180 180 1300 245 1440 191 1600 274V410H0Z"/><path fill="#302a48" d="m0 326 124-36 112 23 166-77 128 63 151-31 127 42 150-57 127 34 140-78 125 70 112-32 138 38v125H0Z"/><path fill="#24233b" d="m0 335 200-7 110 30 167-49 109 30 154-34 127 32 181-24 104 34 165-44 150 28 133-20v99H0Z"/><path fill="#1b1c31" d="m0 367 140-20 231 37 189-24 184 22 194-29 210 32 191-35 261 17v43H0Z"/><g fill="#16182b"><use href="#tree" x="-20" y="230" width="65" height="162"/><use href="#tree" x="36" y="300" width="36" height="90"/><use href="#tree" x="78" y="341" width="25" height="63"/><use href="#tree" x="1490" y="292" width="44" height="110"/><use href="#tree" x="1540" y="236" width="66" height="165"/><use href="#tree" x="1456" y="345" width="25" height="63"/></g></svg>
+      </div>
+  </div>
+
+  <section class="features wrap" id="the-game" aria-label="A game that fits your day">
+    <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#moon"/></svg></span><div><h2>A quiet kind of challenge</h2><p>No rush. Just you and the next move.</p></div></div>
+    <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#grid"/></svg></span><div><h2>Small board. Big possibilities.</h2><p>Four sizes to keep your mind curious.</p></div></div>
+    <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#spark"/></svg></span><div><h2>Unplug and unwind</h2><p>Offline play. No account needed.</p></div></div>
+  </section>
+
+  <section class="challenge wrap" id="your-challenge" aria-labelledby="challenge-title">
+    <div class="section-heading"><div><p class="eyebrow">FIND YOUR FLOW</p><h2 id="challenge-title">Your pace. Your puzzle.</h2></div><p>Start small or stretch your mind.<br>There’s a little challenge for every kind of day.</p></div>
+    <div class="level-grid" role="group" aria-label="Choose a difficulty to preview">
+      <button class="level-card" type="button" data-size="3" aria-pressed="false"><div class="mini-board" data-grid="3" aria-hidden="true"></div><div class="level-info"><span><strong>Easy</strong><small>3 × 3 · 8 tiles</small></span><svg class="icon"><use href="#arrow"/></svg></div><span class="level-caption">A perfect little warm-up.</span></button>
+      <button class="level-card selected" type="button" data-size="4" aria-pressed="true"><div class="mini-board" data-grid="4" aria-hidden="true"></div><div class="level-info"><span><strong>Classic</strong><small>4 × 4 · 15 tiles</small></span><svg class="icon"><use href="#arrow"/></svg></div><span class="level-caption">The one you know and love.</span></button>
+      <button class="level-card" type="button" data-size="5" aria-pressed="false"><div class="mini-board" data-grid="5" aria-hidden="true"></div><div class="level-info"><span><strong>Hard</strong><small>5 × 5 · 24 tiles</small></span><svg class="icon"><use href="#arrow"/></svg></div><span class="level-caption">A little more to think about.</span></button>
+      <button class="level-card" type="button" data-size="6" aria-pressed="false"><div class="mini-board" data-grid="6" aria-hidden="true"></div><div class="level-info"><span><strong>Expert</strong><small>6 × 6 · 35 tiles</small></span><svg class="icon"><use href="#arrow"/></svg></div><span class="level-caption">Settle in. You’ve got this.</span></button>
+    </div>
+    <p class="challenge-note">Pick a board to try it above. <a href="#try-it">One empty space. So many possibilities. <span aria-hidden="true">↗</span></a></p>
+  </section>
+
+  <section class="closing wrap" aria-labelledby="closing-title"><div class="closing-tile" aria-hidden="true">15</div><p class="eyebrow">A SMALL BREAK THAT FEELS GOOD</p><h2 id="closing-title">Make room for a little play.</h2><p>Your next little victory is just a few slides away.</p><a class="app-store" href="https://apps.apple.com/us/app/fifteen-puzzle-board-game/id6830818241" target="_blank" rel="noopener noreferrer" aria-label="Download Fifteen Puzzle on the App Store"><svg class="apple-icon"><use href="#apple"/></svg><span><small>Download on the</small><strong>App Store</strong></span><svg class="icon store-arrow"><use href="#arrow"/></svg></a><span class="closing-note">English · Español · Русский</span></section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-tile">15</span><span>fifteen<span class="brand-light"> puzzle</span></span></a><span>created by Mr. Oleski</span><a class="privacy-link" href="privacy.html">Privacy Policy</a></footer>
+</body>
+</html>

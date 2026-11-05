@@ -1,0 +1,12 @@
+{
+  "name": "fifteen-puzzle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Fifteen Puzzle app landing page",
+  "scripts": {
+    "dev": "python3 -m http.server 5173 --bind 127.0.0.1 --directory dist",
+    "check": "node --check dist/puzzle.js && node --check dist/puzzle-engine.js",
+    "test": "node --test tests/puzzle.test.js"
+  }
+}

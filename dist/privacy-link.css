@@ -1,0 +1,10 @@
+.privacy-link {
+  color: #b2adc7;
+  font-size: 12px;
+}
+
+.privacy-link:hover {
+  color: #f5f1fc;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

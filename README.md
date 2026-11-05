@@ -20,4 +20,15 @@ The interactive board is a browser demonstration of the app. It uses legal rando
 
 The website was verified in Chromium at 320, 390, 768, 1024, and 1440 px: no horizontal overflow or browser errors. Checks covered the initial two-move win, shuffle, all four board sizes, all three themes, and every App Store link.
 
-This project is configured for local use only.
+## GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` checks the JavaScript, tests the puzzle rules, and publishes only `dist/` after pushes to `master`. It can also be run manually from the repository’s Actions tab. No dependency installation or build step is needed.
+
+One-time setup: in [Settings → Pages](https://github.com/alexeyvax/fifteen-puzzle/settings/pages), set **Build and deployment → Source** to **GitHub Actions**. After enabling Pages, run the **Deploy website to GitHub Pages** workflow from the [Actions tab](https://github.com/alexeyvax/fifteen-puzzle/actions/workflows/pages.yml) if the first push happened before Pages was enabled.
+
+After a successful deployment:
+
+- Website: https://alexeyvax.github.io/fifteen-puzzle/
+- Privacy Policy: https://alexeyvax.github.io/fifteen-puzzle/privacy.html
+
+Local development still uses `npm run dev`.
